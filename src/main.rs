@@ -1,4 +1,5 @@
 fn main() {
+    //test split_price_by_spaces
     println!("{}", split_price_by_spaces("10"));
     println!("{}", split_price_by_spaces("100"));
     println!("{}", split_price_by_spaces("1000"));
