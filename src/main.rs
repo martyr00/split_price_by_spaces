@@ -11,7 +11,8 @@ fn main() {
 
 //adds a space after every 3 elements
 fn split_price_by_spaces(numbers: &str) -> String {
-    let mut vec_numbers: Vec<&str> = numbers.split("").collect();
+    let rev_numb = numbers.chars().rev().collect::<String>();
+    let mut vec_numbers: Vec<&str> = rev_numb.split("").collect();
 
     let mut res_vec = Vec::new();
     for x in 0..vec_numbers.len() {
@@ -27,5 +28,5 @@ fn split_price_by_spaces(numbers: &str) -> String {
     for i in res_vec {
         res += &*i
     }
-    (res.trim()).to_string()
+    res.trim().chars().rev().collect::<String>()
 }
