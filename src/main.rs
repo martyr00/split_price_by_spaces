@@ -1,17 +1,18 @@
 fn main() {
     //test split_price_by_spaces
-    println!("{}", split_price_by_spaces("10"));
-    println!("{}", split_price_by_spaces("100"));
-    println!("{}", split_price_by_spaces("1000"));
-    println!("{}", split_price_by_spaces("10000"));
-    println!("{}", split_price_by_spaces("100000"));
-    println!("{}", split_price_by_spaces("1000000"));
-    println!("{}", split_price_by_spaces("10000000"));
+    println!("{}", split_price_by_spaces(10));
+    println!("{}", split_price_by_spaces(100));
+    println!("{}", split_price_by_spaces(1000));
+    println!("{}", split_price_by_spaces(10000));
+    println!("{}", split_price_by_spaces(100000));
+    println!("{}", split_price_by_spaces(1000000));
+    println!("{}", split_price_by_spaces(10000000));
 }
 
 //adds a space after every 3 elements
-fn split_price_by_spaces(numbers: &str) -> String {
-    let rev_numb = numbers.chars().rev().collect::<String>();
+fn split_price_by_spaces(numbers: usize) -> String {
+    let numb_str = numbers.to_string();
+    let rev_numb = numb_str.chars().rev().collect::<String>();
     let mut vec_numbers: Vec<&str> = rev_numb.split("").collect();
 
     let mut res_vec = Vec::new();
