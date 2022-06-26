@@ -1,12 +1,24 @@
 fn main() {
-    //test split_price_by_spaces
     println!("{}", split_price_by_spaces(10));
+    assert_eq!("10", split_price_by_spaces(10));
+
     println!("{}", split_price_by_spaces(100));
+    assert_eq!("100", split_price_by_spaces(100));
+
     println!("{}", split_price_by_spaces(1000));
+    assert_eq!("1 000", split_price_by_spaces(1000));
+
     println!("{}", split_price_by_spaces(10000));
+    assert_eq!("10 000", split_price_by_spaces(10000));
+
     println!("{}", split_price_by_spaces(100000));
+    assert_eq!("100 000", split_price_by_spaces(100000));
+
     println!("{}", split_price_by_spaces(1000000));
+    assert_eq!("1 000 000", split_price_by_spaces(1000000));
+
     println!("{}", split_price_by_spaces(10000000));
+    assert_eq!("10 000 000", split_price_by_spaces(10000000));
 }
 
 //adds a space after every 3 elements
